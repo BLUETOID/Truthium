@@ -27,22 +27,33 @@ const MythsPage: React.FC = () => {
   }, [searchQuery, selectedCategory]);
   
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
-      {/* Header */}
-      <div className="bg-blue-600 py-16 md:py-24">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">Myths Archive</h1>
-            <p className="text-lg text-blue-100">
-              Explore our collection of common myths and discover the facts behind them.
-              Search by keyword or filter by category to find specific topics.
+    <div className="min-h-screen bg-white dark:bg-neutral-950">
+      {/* Enhanced Header */}
+      <div className="gradient-hero py-20 md:py-28 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-600/90 to-secondary-600/90" />
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
+        </div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <div className="mb-6">
+              <span className="inline-block px-4 py-2 bg-white/20 text-white text-sm font-medium rounded-full mb-4">
+                Knowledge Base
+              </span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-shadow leading-tight">Myths Archive</h1>
+            <p className="text-lg md:text-xl text-blue-50 max-w-3xl mx-auto leading-relaxed">
+              Explore our comprehensive collection of common myths and discover the facts behind them.
+              Search by keyword or filter by category to find specific topics that interest you.
             </p>
           </div>
         </div>
       </div>
       
       {/* Main content */}
-      <div className="container mx-auto px-4 md:px-6 py-12">
+      <div className="container mx-auto px-4 md:px-6 py-16">
         <MythsFilter
           categories={categories}
           selectedCategory={selectedCategory}

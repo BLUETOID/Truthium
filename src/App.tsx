@@ -12,7 +12,7 @@ function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
-        <div className="flex flex-col min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-white">
+        <div className="flex flex-col min-h-screen bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-200">
           <Navbar />
           <main className="flex-grow pt-16">
             <Routes>
