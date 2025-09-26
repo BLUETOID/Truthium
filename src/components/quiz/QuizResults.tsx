@@ -108,13 +108,13 @@ const QuizResults: React.FC<QuizResultsProps> = ({
       <div className="space-y-4">
         <button
           onClick={onRestart}
-          className="w-full py-3 px-8 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-colors"
+          className="w-full py-3 px-8 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
         >
           Try Again
         </button>
         <button
           onClick={() => window.location.href = '/myths'}
-          className="w-full py-3 px-8 bg-secondary-600 hover:bg-secondary-700 text-white font-medium rounded-lg transition-colors"
+          className="w-full py-3 px-8 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors"
         >
           Learn More Myths
         </button>
