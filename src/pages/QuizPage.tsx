@@ -10,7 +10,6 @@ const QuizPage: React.FC = () => {
   const [selectedAnswer, setSelectedAnswer] = useState<boolean | null>(null);
   const [hasAnswered, setHasAnswered] = useState(false);
   const [quizStarted, setQuizStarted] = useState(false);
-  const [startTime, setStartTime] = useState<number | null>(null);
 
   // Randomize questions for better replayability
   const [shuffledQuestions, setShuffledQuestions] = useState<QuizQuestionType[]>([]);
@@ -45,7 +44,6 @@ const QuizPage: React.FC = () => {
 
   const handleStartQuiz = () => {
     setQuizStarted(true);
-    setStartTime(Date.now());
   };
 
   const resetQuiz = () => {
@@ -56,7 +54,6 @@ const QuizPage: React.FC = () => {
     setSelectedAnswer(null);
     setHasAnswered(false);
     setQuizStarted(false);
-    setStartTime(null);
   };
 
   const getTotalQuestions = () => shuffledQuestions.length;
